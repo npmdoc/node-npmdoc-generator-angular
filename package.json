@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"generator-angular",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "generator-angular",
+    "description": "api documentation for [generator-angular (v0.16.0)](https://github.com/yeoman/generator-angular#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-generator-angular.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-generator-angular) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-generator-angular.svg)](https://travis-ci.org/npmdoc/node-npmdoc-generator-angular)",
     "devDependencies": {
-        "generator-angular": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "generator-angular": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-generator-angular",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-generator-angular",
+    "keywords": [
+        "documentation",
+        "generator-angular"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_generator_angular.js",
+    "name": "npmdoc-generator-angular",
+    "nameAlias": "npmdoc_generator_angular",
+    "nameOriginal": "npmdoc-generator-angular",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-generator-angular"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
