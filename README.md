@@ -1,6 +1,6 @@
 # npmdoc-generator-angular
 
-#### api documentation for  [generator-angular (v0.16.0)](https://github.com/yeoman/generator-angular#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-generator-angular.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-generator-angular) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-generator-angular.svg)](https://travis-ci.org/npmdoc/node-npmdoc-generator-angular)
+#### basic api documentation for  [generator-angular (v0.16.0)](https://github.com/yeoman/generator-angular#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-generator-angular.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-generator-angular) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-generator-angular.svg)](https://travis-ci.org/npmdoc/node-npmdoc-generator-angular)
 
 #### Yeoman generator for AngularJS
 
@@ -123,7 +123,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "0.16.0"
+    "version": "0.16.0",
+    "bin": {}
 }
 ```
 
